@@ -1,11 +1,9 @@
-VÉRTICE — KIT DE IDENTIDADE VISUAL
+VÉRTICE — IDENTIDADE E PAPELARIA / REVISÃO 02
 
-Artes criadas a partir das aplicações do manual enviado. A conversa anterior não estava acessível; o escopo segue o PDF, não uma lista contratual confirmada.
+Escopo: três marcas aprovadas, cartão (frente e verso), papel timbrado, envelope, três grafismos, três adesivos e banner editorial. Materiais de redes sociais, tag e embalagem da versão anterior foram retirados desta entrega.
 
-SVG: edição em ferramentas compatíveis; PNG: uso digital; PDF: compartilhamento e impressão. O logotipo e o monograma preservam os traçados incorporados no PDF original. Cores: vinho #692234 e rosa #EED9DA.
+Cores: vinho #692234, rosa #EED9DA e marfim de apoio #FAF6EF. Logo e monograma originais preservados em curvas. O manual especifica Citadel Script e Wichittra; as fontes completas e suas licenças não foram fornecidas. Textos de apoio em Georgia/Arial.
 
-O manual indica Citadel Script e Wichittra. Arquivos completos e licenças das fontes não foram fornecidos. O logotipo foi preservado como curvas, e os novos textos usam Georgia/Arial como fontes de apoio. Não são distribuídos arquivos de fontes.
+Os campos entre colchetes são editáveis e devem receber os dados reais antes do uso. Papel timbrado também inclui DOCX com texto editável e arte de fundo. SVG é editável; PDF para compartilhamento e preparação de produção; PNG para visualização. O banner incorpora uma fotografia gerada com IA para esta composição, não representa uma coleção real da loja.
 
-Papelaria: os PDFs têm as dimensões indicadas, em RGB, sem sangria e sem conversão CMYK certificada. A gráfica deve validar sangria, corte, perfil de cor e materiais. Embalagem é arte de aplicação, não projeto estrutural nem faca.
-
-Não foram inventados preços, descontos, telefone, endereço ou perfis sociais. Artes de campanha precisam ser usadas quando corresponderem à coleção vigente.
+Os PDFs físicos têm tamanho final indicado, em RGB e sem sangria. Validar perfil de cor, sangria, margens de segurança, faca e acabamento com a gráfica. O envelope contém a face externa, não uma faca estrutural. As dimensões dos adesivos são sugestões de produção. O banner é horizontal; medida física e distância de leitura precisam ser definidas antes da impressão em grande formato.

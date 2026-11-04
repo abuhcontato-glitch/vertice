@@ -1,11 +1,26 @@
-const filters = document.querySelectorAll('[data-filter]');
-const cards = document.querySelectorAll('[data-category]');
-filters.forEach(button => button.addEventListener('click', () => {
-  filters.forEach(other => other.setAttribute('aria-pressed', String(other === button)));
-  let count = 0;
-  cards.forEach(card => {
-    card.hidden = button.dataset.filter !== 'Todos' && card.dataset.category !== button.dataset.filter;
-    if (!card.hidden) count++;
+const previewDialog = document.getElementById('preview-dialog');
+const previewImage = document.getElementById('preview-image');
+const previewTitle = document.getElementById('preview-title');
+const previewDownload = document.getElementById('preview-download');
+let lastPreviewButton;
+document.querySelectorAll('[data-preview]').forEach(button => {
+  button.addEventListener('click', () => {
+    lastPreviewButton = button;
+    previewImage.src = button.dataset.preview;
+    previewImage.alt = button.dataset.title;
+    previewTitle.textContent = button.dataset.title;
+    previewDownload.href = button.dataset.preview;
+    previewDialog.showModal();
+    document.body.classList.add('modal-open');
   });
-  document.getElementById('result-count').textContent = `${count} entregáveis`;
-}));
+});
+document.getElementById('close-preview').addEventListener('click', () => previewDialog.close());
+previewDialog.addEventListener('click', event => {
+  if (event.target !== previewDialog) return;
+  const box = previewDialog.getBoundingClientRect();
+  if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) previewDialog.close();
+});
+previewDialog.addEventListener('close', () => {
+  document.body.classList.remove('modal-open');
+  if (lastPreviewButton) lastPreviewButton.focus();
+});

@@ -24,163 +24,91 @@
     "height": 800
   },
   {
-    "slug": "post-institucional",
-    "title": "Post institucional",
-    "category": "Redes sociais",
-    "description": "Arte original para feed • 1080 × 1080 px.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "post-novidades",
-    "title": "Post · novidades",
-    "category": "Redes sociais",
-    "description": "Arte original para feed • 1080 × 1080 px.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "post-casual",
-    "title": "Post · casual",
-    "category": "Redes sociais",
-    "description": "Arte original para feed • 1080 × 1080 px.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "post-verao",
-    "title": "Post · verão",
-    "category": "Redes sociais",
-    "description": "Arte original para feed • 1080 × 1080 px.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "post-outlet",
-    "title": "Post · outlet",
-    "category": "Redes sociais",
-    "description": "Arte original para feed • 1080 × 1080 px.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "story-novidades",
-    "title": "Story · novidades",
-    "category": "Redes sociais",
-    "description": "Arte vertical • 1080 × 1920 px; conteúdo centralizado para stories.",
-    "width": 1080,
-    "height": 1920
-  },
-  {
-    "slug": "story-institucional",
-    "title": "Story institucional",
-    "category": "Redes sociais",
-    "description": "Arte vertical • 1080 × 1920 px; conteúdo centralizado para stories.",
-    "width": 1080,
-    "height": 1920
-  },
-  {
-    "slug": "story-agradecimento",
-    "title": "Story · agradecimento",
-    "category": "Redes sociais",
-    "description": "Arte vertical • 1080 × 1920 px; conteúdo centralizado para stories.",
-    "width": 1080,
-    "height": 1920
-  },
-  {
-    "slug": "destaque-novidades",
-    "title": "Destaque · Novidades",
-    "category": "Redes sociais",
-    "description": "Capa de destaque com área central segura para recorte circular.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "destaque-colecoes",
-    "title": "Destaque · Coleções",
-    "category": "Redes sociais",
-    "description": "Capa de destaque com área central segura para recorte circular.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "destaque-looks",
-    "title": "Destaque · Looks",
-    "category": "Redes sociais",
-    "description": "Capa de destaque com área central segura para recorte circular.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "destaque-cuidados",
-    "title": "Destaque · Cuidados",
-    "category": "Redes sociais",
-    "description": "Capa de destaque com área central segura para recorte circular.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "destaque-sobre",
-    "title": "Destaque · Sobre",
-    "category": "Redes sociais",
-    "description": "Capa de destaque com área central segura para recorte circular.",
-    "width": 1080,
-    "height": 1080
-  },
-  {
-    "slug": "banner-site",
-    "title": "Banner para site",
-    "category": "Digital",
-    "description": "Banner editorial para uso digital, sem ofertas ou dados fictícios.",
-    "width": 1920,
-    "height": 800
-  },
-  {
-    "slug": "banner-campanha",
-    "title": "Banner de campanha",
-    "category": "Digital",
-    "description": "Banner editorial para uso digital, sem ofertas ou dados fictícios.",
-    "width": 1600,
-    "height": 600
-  },
-  {
     "slug": "cartao-frente",
-    "title": "Cartão · frente",
+    "title": "Cartão de visita · frente",
     "category": "Papelaria",
-    "description": "Frente institucional • 90 × 50 mm; sem sangria.",
-    "width": 900,
-    "height": 500
+    "description": "90 × 50 mm · composição assimétrica, assinatura em curvas e gesto caligráfico.",
+    "width": 1080,
+    "height": 600
   },
   {
     "slug": "cartao-verso",
-    "title": "Cartão · verso",
+    "title": "Cartão de visita · verso",
     "category": "Papelaria",
-    "description": "Verso institucional • 90 × 50 mm; sem contatos inventados e sem sangria.",
-    "width": 900,
-    "height": 500
-  },
-  {
-    "slug": "tag",
-    "title": "Tag de produto",
-    "category": "Papelaria",
-    "description": "Arte de tag • 50 × 90 mm; posicionamento do furo a definir com a gráfica.",
-    "width": 500,
-    "height": 900
-  },
-  {
-    "slug": "adesivo",
-    "title": "Adesivo circular",
-    "category": "Embalagem",
-    "description": "Arte para adesivo circular de 60 mm; corte indicado pela borda externa.",
-    "width": 600,
+    "description": "90 × 50 mm · contatos editáveis; campos aguardam os dados reais da loja.",
+    "width": 1080,
     "height": 600
   },
   {
-    "slug": "embalagem",
-    "title": "Arte institucional para embalagem",
-    "category": "Embalagem",
-    "description": "Painel de marca • 240 × 160 mm. Aplicar na faca fornecida pelo fabricante.",
+    "slug": "papel-timbrado",
+    "title": "Papel timbrado",
+    "category": "Papelaria",
+    "description": "A4 · cabeçalho leve, área de escrita livre e rodapé com grafismo fluido. Campos editáveis.",
+    "width": 1240,
+    "height": 1754
+  },
+  {
+    "slug": "envelope",
+    "title": "Envelope comercial",
+    "category": "Papelaria",
+    "description": "220 × 110 mm · face externa. Arte deve ser aplicada à faca da gráfica; campos editáveis.",
+    "width": 1440,
+    "height": 720
+  },
+  {
+    "slug": "grafismo-gesto",
+    "title": "Grafismo 01 · gesto",
+    "category": "Grafismos",
+    "description": "Recorte expressivo do monograma. Para cantos, fundos e assinaturas.",
     "width": 1200,
-    "height": 800
+    "height": 900
+  },
+  {
+    "slug": "grafismo-trama",
+    "title": "Grafismo 02 · trama V",
+    "category": "Grafismos",
+    "description": "Módulo geométrico em V. Uma textura contínua para papelaria e embalagens.",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "slug": "grafismo-seda",
+    "title": "Grafismo 03 · movimento",
+    "category": "Grafismos",
+    "description": "Curvas paralelas inspiradas no caimento dos tecidos do manual.",
+    "width": 1200,
+    "height": 900
+  },
+  {
+    "slug": "adesivo-circular",
+    "title": "Adesivo circular",
+    "category": "Adesivos",
+    "description": "Ø 60 mm · selo com monograma e assinatura. Fundo externo transparente.",
+    "width": 900,
+    "height": 900
+  },
+  {
+    "slug": "adesivo-horizontal",
+    "title": "Adesivo horizontal",
+    "category": "Adesivos",
+    "description": "120 × 40 mm · fechamento de embalagens com assinatura e recorte caligráfico.",
+    "width": 1440,
+    "height": 480
+  },
+  {
+    "slug": "adesivo-vertical",
+    "title": "Adesivo vertical",
+    "category": "Adesivos",
+    "description": "45 × 75 mm · selo alongado com contraste de cores e dois momentos de leitura.",
+    "width": 660,
+    "height": 1100
+  },
+  {
+    "slug": "banner-editorial",
+    "title": "Banner editorial",
+    "category": "Banner",
+    "description": "Composição fotográfica com modelo, curvas de seda, recorte orgânico e hierarquia editorial. 1920 × 1000 px.",
+    "width": 1920,
+    "height": 1000
   }
 ]

@@ -1,17 +1,15 @@
-# Vértice — Universo da marca
+# Vértice — Identidade em cada detalhe
 
-Página estática responsiva, sem dependências de execução. 23 artes criadas a partir do manual e organizadas em SVG, PNG e PDF, mais manual original e ZIP completo.
+Site estático responsivo com seis seções: marca, papelaria, grafismos, adesivos, banner e manual. As três marcas aprovadas foram mantidas. Cartão (frente e verso), papel timbrado A4, envelope comercial, três grafismos, três adesivos e banner editorial compõem a revisão 02. Materiais de redes sociais da primeira versão foram removidos.
 
-## Desenvolvimento
+## Desenvolvimento e publicação
 
-Na raiz do projeto: `python -m http.server 4173 --bind 127.0.0.1`. Acesse a página pelo servidor disponível na sua hospedagem. Não exige build, variáveis de ambiente ou backend.
-
-## Publicação
-
-Publique a raiz do projeto como site estático; inclua `assets/`, `downloads/`, `index.html`, `style.css` e `app.js`. Não publique a pasta `.git`. Os downloads são relativos e funcionam em subdiretórios, inclusive GitHub Pages.
+Execute `python -m http.server 4173 --bind 127.0.0.1` na raiz. Não há dependências de execução ou build. Publique `index.html`, `style.css`, `app.js`, `.nojekyll`, `assets/` e `downloads/`. Os caminhos relativos suportam GitHub Pages em subdiretório. As branches main e gh-pages recebem os arquivos de publicação.
 
 ## Geração
 
-`tools/build.py` usa PyMuPDF e o manual incluído em `downloads/` (ou um caminho informado como primeiro argumento) para gerar as artes. `tools/site.py` gera o HTML a partir de `catalog.json`. Os arquivos finais já estão incluídos; nenhuma geração é necessária para publicar.
+`python tools/build.py` usa PyMuPDF e python-docx, o manual em `downloads/` e a fotografia em `assets/editorial-vertice.png`. Gera SVGs, PNGs, PDFs, kits individuais e kit completo. As três marcas existentes são preservadas. `python tools/site.py` recria a página com o catálogo. Os resultados já estão incluídos no repositório.
 
-Veja `downloads/LEIA-ME.txt` para escopo, fontes e especificações de produção. O escopo foi inferido do PDF, sem acesso à conversa contratual anterior. As artes impressas precisam de preparação técnica pela gráfica.
+O cartão reúne frente e verso no mesmo kit e PDF de duas páginas. O papel timbrado inclui DOCX com texto editável e arte de fundo. Os campos de contato estão marcados para substituição pelos dados reais. Arte do envelope corresponde à face externa, sem faca. Consulte `downloads/LEIA-ME.txt` para dimensões e preparação de impressão.
+
+A fotografia editorial foi gerada com IA para a composição. O logotipo original foi preservado em curvas; fontes de apoio Georgia e Arial nos textos novos. As fontes completas indicadas no manual não foram fornecidas.
