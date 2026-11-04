@@ -4,7 +4,7 @@ Página estática responsiva, sem dependências de execução. 23 artes criadas 
 
 ## Desenvolvimento
 
-Na raiz do projeto: `python -m http.server 4173 --bind 0.0.0.0`. Acesse a página pelo servidor disponível na sua hospedagem. Não exige build, variáveis de ambiente ou backend.
+Na raiz do projeto: `python -m http.server 4173 --bind 127.0.0.1`. Acesse a página pelo servidor disponível na sua hospedagem. Não exige build, variáveis de ambiente ou backend.
 
 ## Publicação
 
@@ -12,6 +12,6 @@ Publique a raiz do projeto como site estático; inclua `assets/`, `downloads/`, 
 
 ## Geração
 
-`tools/build.py` usa PyMuPDF e o PDF fonte indicado no script para gerar as artes. `tools/site.py` gera o HTML a partir de `catalog.json`. Os arquivos finais já estão incluídos; nenhuma geração é necessária para publicar.
+`tools/build.py` usa PyMuPDF e o manual incluído em `downloads/` (ou um caminho informado como primeiro argumento) para gerar as artes. `tools/site.py` gera o HTML a partir de `catalog.json`. Os arquivos finais já estão incluídos; nenhuma geração é necessária para publicar.
 
 Veja `downloads/LEIA-ME.txt` para escopo, fontes e especificações de produção. O escopo foi inferido do PDF, sem acesso à conversa contratual anterior. As artes impressas precisam de preparação técnica pela gráfica.

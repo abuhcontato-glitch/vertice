@@ -1,7 +1,7 @@
 from pathlib import Path
-import fitz, re, shutil, json, zipfile, html
+import fitz, re, shutil, json, zipfile, html, sys
 R=Path(__file__).resolve().parents[1]; D=R/'downloads'; A=R/'assets';D.mkdir(exist_ok=True);A.mkdir(exist_ok=True)
-source=Path('/workspace/attachments/b4bb692c-b8fa-4d93-9682-46c128c8954f/Identidade Visual - Vértice - Moda Feminina (1).pdf')
+source=Path(sys.argv[1]) if len(sys.argv)>1 else D/'manual-identidade-visual-vertice.pdf'
 p=fitz.open(source)
 WINE='#692234';PINK='#EED9DA';CREAM='#FAF6EF'
 s=p[8].get_svg_image(text_as_path=True)
@@ -31,7 +31,7 @@ def save(slug,title,category,w,h,body,desc,physical=None):
  if physical:
   target=fitz.open();pg=target.new_page(width=physical[0]*72/25.4,height=physical[1]*72/25.4);pg.show_pdf_page(pg.rect,pdf,0);pdf=target
  pdf.save(D/f'{slug}.pdf')
- pix=doc[0].get_pixmap(matrix=fitz.Matrix(min(1600/w,1600/h),min(1600/w,1600/h)));pix.save(D/f'{slug}.png')
+ pix=doc[0].get_pixmap(matrix=fitz.Matrix(1,1));pix.save(D/f'{slug}.png')
  thumb=doc[0].get_pixmap(matrix=fitz.Matrix(min(640/w,640/h),min(640/w,640/h)));thumb.save(A/f'{slug}.png')
  items.append(dict(slug=slug,title=title,category=category,description=desc,width=w,height=h))
 def base(w,h,dark=False):
@@ -73,7 +73,8 @@ b=rect(0,0,600,600,CREAM)+f'<circle cx="300" cy="300" r="285" fill="{WINE}"/>'+n
 save('adesivo','Adesivo circular','Embalagem',600,600,b,'Arte para adesivo circular de 60 mm; corte indicado pela borda externa.',(60,60))
 b,fg=base(1200,800);b+=nested(logo_dark,330,150,540,297)+text(600,590,'Cada detalhe, pensado para você.',32,WINE,'Georgia','middle')
 save('embalagem','Arte institucional para embalagem','Embalagem',1200,800,b,'Painel de marca • 240 × 160 mm. Aplicar na faca fornecida pelo fabricante.',(240,160))
-shutil.copy2(source,D/'manual-identidade-visual-vertice.pdf')
+if source.resolve() != (D/'manual-identidade-visual-vertice.pdf').resolve():
+ shutil.copy2(source,D/'manual-identidade-visual-vertice.pdf')
 # Original manual cover is a preview, clearly separate from newly created artwork.
 p[0].get_pixmap(matrix=fitz.Matrix(.55,.55)).save(A/'manual.png')
 (D/'LEIA-ME.txt').write_text('VÉRTICE — KIT DE IDENTIDADE VISUAL\n\nArtes criadas a partir das aplicações do manual enviado. A conversa anterior não estava acessível; o escopo segue o PDF, não uma lista contratual confirmada.\n\nSVG: edição em ferramentas compatíveis; PNG: uso digital; PDF: compartilhamento e impressão. O logotipo e o monograma preservam os traçados incorporados no PDF original. Cores: vinho #692234 e rosa #EED9DA.\n\nO manual indica Citadel Script e Wichittra. Arquivos completos e licenças das fontes não foram fornecidos. O logotipo foi preservado como curvas, e os novos textos usam Georgia/Arial como fontes de apoio. Não são distribuídos arquivos de fontes.\n\nPapelaria: os PDFs têm as dimensões indicadas, em RGB, sem sangria e sem conversão CMYK certificada. A gráfica deve validar sangria, corte, perfil de cor e materiais. Embalagem é arte de aplicação, não projeto estrutural nem faca.\n\nNão foram inventados preços, descontos, telefone, endereço ou perfis sociais. Artes de campanha precisam ser usadas quando corresponderem à coleção vigente.\n')
