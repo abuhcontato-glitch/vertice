@@ -1,0 +1,186 @@
+[
+  {
+    "slug": "logotipo-vinho",
+    "title": "Logotipo · vinho",
+    "category": "Marca",
+    "description": "Marca original do manual, com fundo transparente.",
+    "width": 1200,
+    "height": 660
+  },
+  {
+    "slug": "logotipo-claro",
+    "title": "Logotipo · claro",
+    "category": "Marca",
+    "description": "Versão clara com fundo transparente, para superfícies escuras.",
+    "width": 1200,
+    "height": 660
+  },
+  {
+    "slug": "monograma",
+    "title": "Monograma V",
+    "category": "Marca",
+    "description": "Símbolo original extraído da construção do logotipo.",
+    "width": 800,
+    "height": 800
+  },
+  {
+    "slug": "post-institucional",
+    "title": "Post institucional",
+    "category": "Redes sociais",
+    "description": "Arte original para feed • 1080 × 1080 px.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "post-novidades",
+    "title": "Post · novidades",
+    "category": "Redes sociais",
+    "description": "Arte original para feed • 1080 × 1080 px.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "post-casual",
+    "title": "Post · casual",
+    "category": "Redes sociais",
+    "description": "Arte original para feed • 1080 × 1080 px.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "post-verao",
+    "title": "Post · verão",
+    "category": "Redes sociais",
+    "description": "Arte original para feed • 1080 × 1080 px.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "post-outlet",
+    "title": "Post · outlet",
+    "category": "Redes sociais",
+    "description": "Arte original para feed • 1080 × 1080 px.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "story-novidades",
+    "title": "Story · novidades",
+    "category": "Redes sociais",
+    "description": "Arte vertical • 1080 × 1920 px; conteúdo centralizado para stories.",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "slug": "story-institucional",
+    "title": "Story institucional",
+    "category": "Redes sociais",
+    "description": "Arte vertical • 1080 × 1920 px; conteúdo centralizado para stories.",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "slug": "story-agradecimento",
+    "title": "Story · agradecimento",
+    "category": "Redes sociais",
+    "description": "Arte vertical • 1080 × 1920 px; conteúdo centralizado para stories.",
+    "width": 1080,
+    "height": 1920
+  },
+  {
+    "slug": "destaque-novidades",
+    "title": "Destaque · Novidades",
+    "category": "Redes sociais",
+    "description": "Capa de destaque com área central segura para recorte circular.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "destaque-colecoes",
+    "title": "Destaque · Coleções",
+    "category": "Redes sociais",
+    "description": "Capa de destaque com área central segura para recorte circular.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "destaque-looks",
+    "title": "Destaque · Looks",
+    "category": "Redes sociais",
+    "description": "Capa de destaque com área central segura para recorte circular.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "destaque-cuidados",
+    "title": "Destaque · Cuidados",
+    "category": "Redes sociais",
+    "description": "Capa de destaque com área central segura para recorte circular.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "destaque-sobre",
+    "title": "Destaque · Sobre",
+    "category": "Redes sociais",
+    "description": "Capa de destaque com área central segura para recorte circular.",
+    "width": 1080,
+    "height": 1080
+  },
+  {
+    "slug": "banner-site",
+    "title": "Banner para site",
+    "category": "Digital",
+    "description": "Banner editorial para uso digital, sem ofertas ou dados fictícios.",
+    "width": 1920,
+    "height": 800
+  },
+  {
+    "slug": "banner-campanha",
+    "title": "Banner de campanha",
+    "category": "Digital",
+    "description": "Banner editorial para uso digital, sem ofertas ou dados fictícios.",
+    "width": 1600,
+    "height": 600
+  },
+  {
+    "slug": "cartao-frente",
+    "title": "Cartão · frente",
+    "category": "Papelaria",
+    "description": "Frente institucional • 90 × 50 mm; sem sangria.",
+    "width": 900,
+    "height": 500
+  },
+  {
+    "slug": "cartao-verso",
+    "title": "Cartão · verso",
+    "category": "Papelaria",
+    "description": "Verso institucional • 90 × 50 mm; sem contatos inventados e sem sangria.",
+    "width": 900,
+    "height": 500
+  },
+  {
+    "slug": "tag",
+    "title": "Tag de produto",
+    "category": "Papelaria",
+    "description": "Arte de tag • 50 × 90 mm; posicionamento do furo a definir com a gráfica.",
+    "width": 500,
+    "height": 900
+  },
+  {
+    "slug": "adesivo",
+    "title": "Adesivo circular",
+    "category": "Embalagem",
+    "description": "Arte para adesivo circular de 60 mm; corte indicado pela borda externa.",
+    "width": 600,
+    "height": 600
+  },
+  {
+    "slug": "embalagem",
+    "title": "Arte institucional para embalagem",
+    "category": "Embalagem",
+    "description": "Painel de marca • 240 × 160 mm. Aplicar na faca fornecida pelo fabricante.",
+    "width": 1200,
+    "height": 800
+  }
+]
