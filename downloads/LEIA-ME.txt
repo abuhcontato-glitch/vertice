@@ -4,6 +4,6 @@ Escopo: três marcas aprovadas, cartão (frente e verso), papel timbrado, envelo
 
 Cores: vinho #692234, rosa #EED9DA e marfim de apoio #FAF6EF. Logo e monograma originais preservados em curvas. O manual especifica Citadel Script e Wichittra; as fontes completas e suas licenças não foram fornecidas. Textos de apoio em Georgia/Arial.
 
-Os campos entre colchetes são editáveis e devem receber os dados reais antes do uso. Papel timbrado também inclui DOCX com texto editável e arte de fundo. SVG é editável; PDF para compartilhamento e preparação de produção; PNG para visualização. O banner incorpora uma fotografia gerada com IA para esta composição, não representa uma coleção real da loja.
+Versão pública institucional, sem dados pessoais ou campos de contato pendentes. Área de escrita do timbrado e destinatário do envelope permanecem livres para uso. Papel timbrado também inclui DOCX com texto editável e arte de fundo. SVG é editável; PDF para compartilhamento e preparação de produção; PNG para visualização. O banner incorpora uma fotografia gerada com IA para esta composição, não representa uma coleção real da loja.
 
 Os PDFs físicos têm tamanho final indicado, em RGB e sem sangria. Validar perfil de cor, sangria, margens de segurança, faca e acabamento com a gráfica. O envelope contém a face externa, não uma faca estrutural. As dimensões dos adesivos são sugestões de produção. O banner é horizontal; medida física e distância de leitura precisam ser definidas antes da impressão em grande formato.

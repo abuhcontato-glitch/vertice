@@ -35,7 +35,7 @@
     "slug": "cartao-verso",
     "title": "Cartão de visita · verso",
     "category": "Papelaria",
-    "description": "90 × 50 mm · contatos editáveis; campos aguardam os dados reais da loja.",
+    "description": "90 × 50 mm · verso institucional, sem dados pessoais ou campos pendentes.",
     "width": 1080,
     "height": 600
   },
@@ -43,7 +43,7 @@
     "slug": "papel-timbrado",
     "title": "Papel timbrado",
     "category": "Papelaria",
-    "description": "A4 · cabeçalho leve, área de escrita livre e rodapé com grafismo fluido. Campos editáveis.",
+    "description": "A4 · cabeçalho leve, área de escrita livre e rodapé institucional.",
     "width": 1240,
     "height": 1754
   },
@@ -51,7 +51,7 @@
     "slug": "envelope",
     "title": "Envelope comercial",
     "category": "Papelaria",
-    "description": "220 × 110 mm · face externa. Arte deve ser aplicada à faca da gráfica; campos editáveis.",
+    "description": "220 × 110 mm · face externa. Versão institucional; área do destinatário livre. Aplicar à faca da gráfica.",
     "width": 1440,
     "height": 720
   },

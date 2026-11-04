@@ -25,7 +25,7 @@ def nested(svg,x,y,w,h):
 
 def rect(x,y,w,h,fill):return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{fill}"/>'
 def save(slug,title,category,w,h,body,desc,physical=None):
- if category=='Marca' and all((D/f'{slug}.{ext}').exists() for ext in ['svg','pdf','png']):
+ if category!='Papelaria' and all((D/f'{slug}.{ext}').exists() for ext in ['svg','pdf','png']):
   items.append(dict(slug=slug,title=title,category=category,description=desc,width=w,height=h))
   return
  svg=f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{w}" height="{h}" viewBox="0 0 {w} {h}"><title>{html.escape(title)}</title>{body}</svg>'
@@ -66,28 +66,24 @@ b+=text(350,536,'ELEGÂNCIA QUE VALORIZA QUEM VOCÊ É.',13,PINK,'Arial',spacing
 save('cartao-frente','Cartão de visita · frente','Papelaria',1080,600,b,'90 × 50 mm · composição assimétrica, assinatura em curvas e gesto caligráfico.',(90,50))
 b=rect(0,0,1080,600,CREAM)+rect(0,0,1080,14,WINE)+rect(840,0,240,600,PINK)
 b+=lattice(1080,600,WINE,.08)+rect(0,135,835,355,CREAM)+nested(monogram(WINE),840,195,210,180)
-b+=text(72,95,'VÉRTICE / MODA FEMININA',16,WINE,'Arial',spacing=3)+text(72,207,'Vamos nos conectar.',43)
-b+=text(74,284,'WHATSAPP',12,WINE,'Arial',spacing=2)+text(74,316,'[inserir telefone]',21,WINE,'Arial')
-b+=text(440,284,'INSTAGRAM',12,WINE,'Arial',spacing=2)+text(440,316,'[inserir perfil]',21,WINE,'Arial')
-b+=text(74,384,'ENDEREÇO / E-MAIL',12,WINE,'Arial',spacing=2)+text(74,416,'[inserir dados da loja]',21,WINE,'Arial')
+b+=text(72,95,'VÉRTICE / MODA FEMININA',16,WINE,'Arial',spacing=3)+text(74,213,'Seu estilo.',45)+text(74,269,'Sua essência.',45)
+b+=text(74,380,'MODA FEMININA',16,WINE,'Arial',spacing=3)
 b+=text(74,550,'SEU ESTILO. SUA ESSÊNCIA.',13,WINE,'Arial',spacing=2)
-save('cartao-verso','Cartão de visita · verso','Papelaria',1080,600,b,'90 × 50 mm · contatos editáveis; campos aguardam os dados reais da loja.',(90,50))
+save('cartao-verso','Cartão de visita · verso','Papelaria',1080,600,b,'90 × 50 mm · verso institucional, sem dados pessoais ou campos pendentes.',(90,50))
 w,h=1240,1754
 b=rect(0,0,w,h,CREAM)+rect(0,0,w,12,WINE)+nested(logo_dark,94,75,310,170)
 b+=f'<path d="M980 0H1240V520C1170 430 1030 180 980 0Z" fill="{PINK}"/>'
 b+=f'<g opacity=".18">'+nested(monogram(WINE),1005,25,285,300)+'</g>'
-b+=text(94,340,'[Título do documento]',31)+text(94,405,'[Local e data]',18,WINE,'Arial')
-b+=text(94,515,'[Área de texto editável]',20,'#8B7479','Arial')
 b+=f'<path d="M0 1630C310 1585 460 1805 800 1720S1110 1570 1240 1605V1754H0Z" fill="{PINK}"/>'
-b+=text(94,1655,'VÉRTICE • MODA FEMININA',13,WINE,'Arial',spacing=2)+text(94,1691,'[telefone]  ·  [e-mail]  ·  [endereço]',15,WINE,'Arial')
-save('papel-timbrado','Papel timbrado','Papelaria',w,h,b,'A4 · cabeçalho leve, área de escrita livre e rodapé com grafismo fluido. Campos editáveis.',(210,297))
+b+=text(94,1635,'VÉRTICE • MODA FEMININA',13,WINE,'Arial',spacing=2)+text(94,1675,'Elegância que valoriza quem você é.',15,WINE,'Arial')
+save('papel-timbrado','Papel timbrado','Papelaria',w,h,b,'A4 · cabeçalho leve, área de escrita livre e rodapé institucional.',(210,297))
 w,h=1440,720
 b=rect(0,0,w,h,CREAM)+rect(0,0,220,h,WINE)+f'<g opacity=".16">'+nested(monogram(PINK),-55,135,330,390)+'</g>'
 b+=nested(logo_dark,285,60,370,204)+rect(285,300,145,2,WINE)+text(285,355,'DESTINATÁRIO',12,WINE,'Arial',spacing=3)
-for y,t in [(403,'[nome]'),(442,'[endereço]'),(481,'[cidade / UF / CEP]')]:b+=text(285,y,t,20,'#8B7479','Arial')
+for y in [403,442,481]:b+=rect(285,y,670,1,PINK)
 b+=f'<path d="M1020 720C1040 440 1330 540 1440 270V720Z" fill="{PINK}"/>'
-b+=text(285,646,'REMETENTE · VÉRTICE MODA FEMININA',12,WINE,'Arial',spacing=1.4)+text(285,675,'[endereço da loja]',16,WINE,'Arial')
-save('envelope','Envelope comercial','Papelaria',w,h,b,'220 × 110 mm · face externa. Arte deve ser aplicada à faca da gráfica; campos editáveis.',(220,110))
+b+=text(285,605,'REMETENTE · VÉRTICE MODA FEMININA',12,WINE,'Arial',spacing=1.4)+text(285,650,'Elegância que valoriza quem você é.',17,WINE,'Arial')
+save('envelope','Envelope comercial','Papelaria',w,h,b,'220 × 110 mm · face externa. Versão institucional; área do destinatário livre. Aplicar à faca da gráfica.',(220,110))
 for slug,title,desc,body in [
  ('grafismo-gesto','Grafismo 01 · gesto','Recorte expressivo do monograma. Para cantos, fundos e assinaturas.',rect(0,0,1200,900,PINK)+gesture(1200,900,WINE,.95)),
  ('grafismo-trama','Grafismo 02 · trama V','Módulo geométrico em V. Uma textura contínua para papelaria e embalagens.',rect(0,0,1200,900,WINE)+lattice(1200,900,PINK,.55)),
@@ -146,10 +142,8 @@ for tag in ['wp:docPr','wp:cNvGraphicFramePr','a:graphic']:
  if node is not None:anchor.append(node)
 inline.getparent().replace(inline,anchor)
 style=word.styles['Normal'];style.font.name='Arial';style.font.size=Pt(11);style.font.color.rgb=RGBColor.from_string('692234')
-word.add_heading('[Título do documento]',0)
-word.add_paragraph('[Local e data]')
-word.add_paragraph('[Digite o conteúdo do documento aqui.]')
-footer=sec.footer.paragraphs[0];footer.text='VÉRTICE • MODA FEMININA\n[telefone] · [e-mail] · [endereço]'
+word.add_paragraph('')
+footer=sec.footer.paragraphs[0];footer.text='VÉRTICE • MODA FEMININA\nElegância que valoriza quem você é.'
 for r in footer.runs:r.font.size=Pt(8)
 word.save(D/'papel-timbrado.docx')
 with zipfile.ZipFile(D/'papel-timbrado.zip','a',zipfile.ZIP_DEFLATED) as z:z.write(D/'papel-timbrado.docx','papel-timbrado.docx')
@@ -164,7 +158,7 @@ Escopo: três marcas aprovadas, cartão (frente e verso), papel timbrado, envelo
 
 Cores: vinho #692234, rosa #EED9DA e marfim de apoio #FAF6EF. Logo e monograma originais preservados em curvas. O manual especifica Citadel Script e Wichittra; as fontes completas e suas licenças não foram fornecidas. Textos de apoio em Georgia/Arial.
 
-Os campos entre colchetes são editáveis e devem receber os dados reais antes do uso. Papel timbrado também inclui DOCX com texto editável e arte de fundo. SVG é editável; PDF para compartilhamento e preparação de produção; PNG para visualização. O banner incorpora uma fotografia gerada com IA para esta composição, não representa uma coleção real da loja.
+Versão pública institucional, sem dados pessoais ou campos de contato pendentes. Área de escrita do timbrado e destinatário do envelope permanecem livres para uso. Papel timbrado também inclui DOCX com texto editável e arte de fundo. SVG é editável; PDF para compartilhamento e preparação de produção; PNG para visualização. O banner incorpora uma fotografia gerada com IA para esta composição, não representa uma coleção real da loja.
 
 Os PDFs físicos têm tamanho final indicado, em RGB e sem sangria. Validar perfil de cor, sangria, margens de segurança, faca e acabamento com a gráfica. O envelope contém a face externa, não uma faca estrutural. As dimensões dos adesivos são sugestões de produção. O banner é horizontal; medida física e distância de leitura precisam ser definidas antes da impressão em grande formato.
 '''
