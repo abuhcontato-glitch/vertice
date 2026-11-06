@@ -1,13 +1,8 @@
 from pathlib import Path
 import fitz, re, shutil, json, zipfile, html, sys, base64
 R=Path(__file__).resolve().parents[1]; D=R/'downloads'; A=R/'assets';D.mkdir(exist_ok=True);A.mkdir(exist_ok=True)
-source=Path(sys.argv[1]) if len(sys.argv)>1 else D/'manual-identidade-visual-vertice.pdf'
-p=fitz.open(source)
 WINE='#692234';PINK='#EED9DA';CREAM='#FAF6EF'
-s=p[8].get_svg_image(text_as_path=True)
-s=re.sub(r'<path[^>]*d="M0 0H1920V1080H0Z"[^>]*/>','',s)
-s=re.sub(r' clip-path="url\(#clip_[67]\)"','',s)
-s=re.sub(r'width="1440" height="810" viewBox="0 0 1440 810"','width="600" height="330" viewBox="385 235 600 330"',s, count=1)
+s=(A/'logo-master.svg').read_text()
 logo_light=s
 logo_dark=s.replace('#fff2dd',WINE)
 (A/'logo.svg').write_text(logo_dark)
@@ -25,22 +20,19 @@ def nested(svg,x,y,w,h):
 
 def rect(x,y,w,h,fill):return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{fill}"/>'
 def save(slug,title,category,w,h,body,desc,physical=None):
- if category!='Papelaria' and all((D/f'{slug}.{ext}').exists() for ext in ['svg','pdf','png']):
-  items.append(dict(slug=slug,title=title,category=category,description=desc,width=w,height=h))
-  return
  svg=f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{w}" height="{h}" viewBox="0 0 {w} {h}"><title>{html.escape(title)}</title>{body}</svg>'
  (D/f'{slug}.svg').write_text(svg)
  doc=fitz.open(stream=svg.encode(),filetype='svg');pdf=fitz.open('pdf',doc.convert_to_pdf())
  if physical:
   target=fitz.open();pg=target.new_page(width=physical[0]*72/25.4,height=physical[1]*72/25.4);pg.show_pdf_page(pg.rect,pdf,0);pdf=target
  pdf.save(D/f'{slug}.pdf')
- pix=doc[0].get_pixmap(matrix=fitz.Matrix(1,1));pix.save(D/f'{slug}.png')
- thumb=doc[0].get_pixmap(matrix=fitz.Matrix(min(640/w,640/h),min(640/w,640/h)));thumb.save(A/f'{slug}.png')
+ pix=doc[0].get_pixmap(matrix=fitz.Matrix(1,1),alpha=category=='Marca');pix.save(D/f'{slug}.png')
+ thumb=doc[0].get_pixmap(matrix=fitz.Matrix(min(640/w,640/h),min(640/w,640/h)),alpha=category=='Marca');thumb.save(A/f'{slug}.png')
  items.append(dict(slug=slug,title=title,category=category,description=desc,width=w,height=h))
 def base(w,h,dark=False):
  bg=WINE if dark else CREAM;fg=CREAM if dark else WINE
  return rect(0,0,w,h,bg)+f'<rect x="{w*.045}" y="{h*.04}" width="{w*.91}" height="{h*.92}" fill="none" stroke="{PINK if dark else WINE}" stroke-opacity=".35"/>',fg
-save('logotipo-vinho','Logotipo · vinho','Marca',1200,660,nested(logo_dark,0,0,1200,660),'Marca original do manual, com fundo transparente.')
+save('logotipo-vinho','Logotipo · vinho','Marca',1200,660,nested(logo_dark,0,0,1200,660),'Grafia revisada: Vértice · Moda Feminina. Fundo transparente.')
 save('logotipo-claro','Logotipo · claro','Marca',1200,660,nested(logo_light,0,0,1200,660),'Versão clara com fundo transparente, para superfícies escuras.')
 save('monograma','Monograma V','Marca',800,800,nested(monogram(WINE),80,80,640,640),'Símbolo original extraído da construção do logotipo.')
 # Three complementary graphic systems: calligraphic gesture, V lattice and silk ribbons.
@@ -152,17 +144,19 @@ with zipfile.ZipFile(D/'cartao-visita.zip','w',zipfile.ZIP_DEFLATED) as z:
  for slug in ['cartao-frente','cartao-verso']:
   for ext in ['svg','png','pdf']:z.write(D/f'{slug}.{ext}',f'{slug}.{ext}')
  z.write(D/'cartao-visita-frente-verso.pdf','cartao-visita-frente-verso.pdf')
-notes='''VÉRTICE — IDENTIDADE E PAPELARIA / REVISÃO 02
+notes='''VÉRTICE — IDENTIDADE E PAPELARIA / REVISÃO 05 — GRAFIA CORRIGIDA
 
 Escopo: três marcas aprovadas, cartão (frente e verso), papel timbrado, envelope, três grafismos, três adesivos e banner editorial. Materiais de redes sociais, tag e embalagem da versão anterior foram retirados desta entrega.
 
-Cores: vinho #692234, rosa #EED9DA e marfim de apoio #FAF6EF. Logo e monograma originais preservados em curvas. O manual especifica Citadel Script e Wichittra; as fontes completas e suas licenças não foram fornecidas. Textos de apoio em Georgia/Arial.
+Cores: vinho #692234, rosa #EED9DA e marfim de apoio #FAF6EF. Logotipo revisado em curvas: Vértice e MODA FEMININA. Monograma preservado. O manual especifica Citadel Script e Wichittra; as fontes completas e suas licenças não foram fornecidas. Textos de apoio em Georgia/Arial.
 
 Versão pública institucional, sem dados pessoais ou campos de contato pendentes. Área de escrita do timbrado e destinatário do envelope permanecem livres para uso. Papel timbrado também inclui DOCX com texto editável e arte de fundo. SVG é editável; PDF para compartilhamento e preparação de produção; PNG para visualização. O banner incorpora uma fotografia gerada com IA para esta composição, não representa uma coleção real da loja.
 
 Os PDFs físicos têm tamanho final indicado, em RGB e sem sangria. Validar perfil de cor, sangria, margens de segurança, faca e acabamento com a gráfica. O envelope contém a face externa, não uma faca estrutural. As dimensões dos adesivos são sugestões de produção. O banner é horizontal; medida física e distância de leitura precisam ser definidas antes da impressão em grande formato.
 '''
 (D/'LEIA-ME.txt').write_text(notes)
+import runpy
+runpy.run_path(str(R/'tools'/'manual.py'),run_name='__main__')
 (R/'catalog.json').write_text(json.dumps(items,ensure_ascii=False,indent=2))
 # Remove only obsolete generated deliverables known from the previous version.
 keep={f"{i['slug']}.{ext}" for i in items for ext in ['svg','png','pdf','zip']}
