@@ -1,5 +1,7 @@
-# Estúdio de conteúdo Vértice
+# Vértice — Direção da coleção v2
 
-Guia estático para 13 peças com 39 direções (reel, stories e fotos), quatro quadros por direção, legendas, filtros, busca e checklist local. Fotos extraídas do catálogo fornecido; os recortes são referências de enquadramento, sem simular captação de movimentos ou costas. Informações de estoque são históricas do PDF.
+Sala de pré-produção estática com rotas por hash: campanha, 13 conteúdos, linguagem visual e produção. Cada conteúdo tem seis sequências de cinco segundos, 18 estudos vetoriais ampliáveis, roteiro, orientação técnica e desdobramentos em quatro stories e quatro fotos. Fotos e informações de produto vêm do catálogo fornecido.
 
-Sirva a raiz do repositório e acesse `/estudio/`. Não há build nem serviços externos. O checklist usa localStorage com fallback; plano de produção exportado em TXT. Catálogo PDF incluído. Publicar esta pasta junto de `assets/` da raiz. Links individuais usam `#look-1` até `#look-13`.
+Os 234 SVGs são desenhos esquemáticos originais de bloqueio e enquadramento. Não são fotografias, reconstruções fiéis de modelagem ou frames de captação. As fotos reais aparecem no cabeçalho de cada direção para referência de produto. Datas e produção são propostas; disponibilidade e reservas devem ser confirmadas.
+
+Sirva a raiz e abra `/estudio/`. Sem dependências, build ou backend. Checklist local com tratamento de indisponibilidade do armazenamento. Exportação de plano em TXT e catálogo em PDF. Testado com Chromium em desktop e celular: busca, filtros, abas, sequências, ampliação, teclado, persistência e download.
